@@ -771,3 +771,21 @@ interface User {
 
 //modules:
 
+import { Square } from "./shapes/Square";
+import { Circle as MyCircle } from "./shapes/Circle";
+
+let circle = new MyCircle(1)
+console.log(circle.radius)
+
+let square = new Square(1)
+console.log(square.width)
+
+    //wildcard import
+
+import * as Circle from "./shapes/Circle";
+
+let newCircle = new Circle.Circle(1)
+console.log(newCircle.radius)
+
+    //re-exporting:
+import { Circle, Square } from "./shapes";
